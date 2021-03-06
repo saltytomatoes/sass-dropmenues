@@ -105,3 +105,76 @@ li:hover > ul.drop-menu.menu-2
       100%
         opacity: 1
         transform: translate(0px,0px) rotate(0deg)
+
+
+li:hover > ul.drop-menu.menu-3
+
+  li
+    opacity: 0
+
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        animation:
+          name: menu3
+          duration: 300ms
+          delay: (300ms * $i * 0.5) - 300
+          timing-function: ease-in-out
+          fill-mode: forwards
+
+    @keyframes menu3
+      0%
+        opacity: 0
+        transform: scale(0)
+      100%
+        opacity: 1
+        transform: scale(1)
+
+
+li:hover > ul.drop-menu.menu-4
+
+  li
+    opacity: 0
+
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        animation:
+          name: menu4
+          duration: 300ms
+          delay: (300ms * $i * 0.5) - 300
+          timing-function: ease-in-out
+          fill-mode: forwards
+
+    @keyframes menu4
+      0%
+        opacity: 0
+        transform: scale(1.2)
+
+
+      100%
+        opacity: 1
+        transform: scale(1)
+
+
+li:hover > ul.drop-menu.menu-5
+
+  li
+    opacity: 0
+
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        animation:
+          name: menu5
+          duration: 400ms
+          delay: (400ms * $i * 0.5) - 400
+          timing-function: ease-in-out
+          fill-mode: forwards
+
+    @keyframes menu5
+      0%
+        opacity: 0
+        transform: rotateX(180deg) translateY(50px)
+
+
+      100%
+        opacity: 1
+        transform: rotateX(0deg) translateY(0px)
